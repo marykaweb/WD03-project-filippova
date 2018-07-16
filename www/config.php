@@ -5,10 +5,8 @@ define('DB_NAME', 'WD03-project-filippova');
 define('DB_USER', 'root');
 define('PASS', '');
 
-/* Путь до корневой директории скрипта по протоколу HTTP */
-define('HOST', $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] . '/');
-/* Физический путь до корневой директории */
-define('ROOT', dirname(__FILE__) . '/');
-
+define('SITE_NAME', 'Сайт-портфолио Мария Филиппова');
+define('SITE_EMAIL', 'info@hol.es.ru');
+define('ADMIN_EMAIL', 'marykaweb@yandex.ru');
 
 ?>
