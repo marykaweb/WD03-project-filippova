@@ -29,7 +29,7 @@ switch ( $uri[0] ) {
 	case '':
 		include ROOT . "modules/main/index.php";
 		break;
-	// :::::::::: USERS ::::::::::
+// :::::::::: USERS ::::::::::
 	case 'login':
 		include ROOT . "modules/login/login.php";
 		break;
@@ -51,9 +51,19 @@ switch ( $uri[0] ) {
 	case 'profile-edit':
 		include ROOT . "modules/profile/edit.php";
 		break;
-
+// :::::::::: USERS ::::::::::
+	case 'blog':
+		include ROOT . "modules/blog/index.php";
+		break;
+	case 'blog/post-new':
+		include ROOT . "modules/blog/post-new.php";
+		break;
+	case 'blog-post':
+		include ROOT . "modules/blog/post.php";
+		break;
+// :::::::::: USERS ::::::::::	
 	default:
-		include "modules/main/index.php";
+		echo "Main page / 404";
 		break;
 }	
 
