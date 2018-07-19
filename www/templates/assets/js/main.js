@@ -15,7 +15,6 @@ $(document).ready(function() {
 		var _pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
 		$('.error').remove();
 		errorBlock.after(error);
-
 		if (mailText == '' && passwordText == '') {
 			$('.error').fadeIn();
 			$('.error').text('Введите email и пароль');
@@ -34,7 +33,7 @@ $(document).ready(function() {
 			password.focus(function(event) {
 				$('.error').fadeOut();
 			});
-		} else if ( mail.length && !_pattern.test(mailText) ) {
+		} else if (mail.length && !_pattern.test(mailText)) {
 			$('.error').fadeIn();
 			$('.error').text('Некорректный email');
 			mail.focus(function(event) {
@@ -113,4 +112,12 @@ $(document).ready(function() {
 			$('#setNewPasswordForm').submit();
 		}
 	});
+
+	setTimeout(function(){
+		$('[data-notify-hide]').slideUp(400);
+	}, 2000);
+	$('[data-notify-hide]').dblclick(function(){
+		$(this).slideUp(400);
+	});
+	
 });

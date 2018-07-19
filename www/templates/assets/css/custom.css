@@ -57,6 +57,14 @@ input.button {
 	background-image: -o-linear-gradient(bottom, #006e3b 0%, #00a85a 100%);
 	background-image: linear-gradient(to top, #006e3b 0%, #00a85a 100%);
 }
+
 .header__nav-link--active {
 	border: none;
+}
+.button--big {
+	font-size: 16px;
+	height: 44px;
+	padding-left: 1.8em;
+	padding-right: 1.8em;
+	line-height: 1.2;
 }

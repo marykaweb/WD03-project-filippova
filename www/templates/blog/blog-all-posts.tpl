@@ -7,9 +7,9 @@
 			</div>
 		</div>
 		<div class="row pb-35">
-			
+
 			<?php foreach ($posts as $post) {
 				include ROOT . "templates/_parts/_blog-card.tpl";
 			} ?>
+		</div>
 	</div>
-</div>
