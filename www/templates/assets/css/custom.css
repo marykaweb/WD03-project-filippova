@@ -61,10 +61,41 @@ input.button {
 .header__nav-link--active {
 	border: none;
 }
+
 .button--big {
 	font-size: 16px;
 	height: 44px;
 	padding-left: 1.8em;
 	padding-right: 1.8em;
 	line-height: 1.2;
+}
+.button--medium {
+	font-size: 16px;
+	height: 40px;
+	padding-left: 1.8em;
+	padding-right: 1.8em;
+	line-height: 1.2;
+}
+
+.uploaded-image {
+	background-color: transparent;
+}
+
+.mr-330 {
+	margin-right: 330px!important;
+}
+html, body {
+	height: 100%!important;
+} 
+body::before {
+	content: ;
+	display: none;
+}
+.sticky-footer {
+	display: flex;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-justify-content: space-between;
+	        justify-content: space-between;
 }

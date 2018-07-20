@@ -1,8 +1,20 @@
 <?php
-// $title = "Блог - все записи";
 
-$post = R::findOne('posts', 'id=?', array($_GET['id']));
+$sql = '
+	SELECT posts.id, posts.title, posts.text, posts.post_img, posts.date_time, posts.author_id, posts.cat,
+		users.name, users.secondname,
+		categories.cat_title
+	FROM `posts`
+	INNER JOIN categories
+	on posts.cat = categories.id
+	INNER JOIN users
+	On posts.author_id = users.id
+	where posts.id = ' . $_GET['id'] . ' limit 1';
 
+$post = R::getAll($sql);
+$post = $post[0];
+
+$title = $post['title'];
 
 ob_start();
 include ROOT . "templates/_parts/_header.tpl";
