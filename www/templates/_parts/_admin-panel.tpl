@@ -17,7 +17,10 @@
 	</div>
 	<div class="header-admin-nav">
 		<div class="header-admin-nav__items"><i class="fa fa-plus-circle header-admin-nav__icons"></i>
-			<a class="header-admin-nav__link" href="link">Пост</a>
+			<a class="header-admin-nav__link" href="<?=HOST?>blog/post-new">Пост</a>
+		</div>
+		<div class="header-admin-nav__items"><i class="fa fa-folder header-admin-nav__icons"></i>
+			<a class="header-admin-nav__link" href="<?=HOST?>blog/categories">Категории</a>
 		</div>
 		<div class="header-admin-nav__items"><i class="fa fa-plus-circle header-admin-nav__icons"></i>
 			<a class="header-admin-nav__link" href="link">Работа</a>

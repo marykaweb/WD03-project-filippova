@@ -51,7 +51,20 @@ switch ( $uri[0] ) {
 	case 'profile-edit':
 		include ROOT . "modules/profile/edit.php";
 		break;
-// :::::::::: USERS ::::::::::
+// :::::::::: CATEGORY ::::::::::
+	case 'blog/categories':
+		include ROOT . "modules/categories/all.php";
+		break;
+	case 'blog/categories-new':
+		include ROOT . "modules/categories/new.php";
+		break;
+	case 'blog/categories-edit':
+		include ROOT . "modules/categories/edit.php";
+		break;
+	case 'blog/categories-delete':
+		include ROOT . "modules/categories/delete.php";
+		break;
+// :::::::::: BLOG ::::::::::
 	case 'blog':
 		include ROOT . "modules/blog/index.php";
 		break;
