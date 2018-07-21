@@ -13,7 +13,7 @@
 		<div class="login-page-form__col">
 			<div class="checkbox">
 				<label class="checkbox__label">
-					<input class="checkbox__input" type="checkbox" checked="checked" />
+					<input class="checkbox__input" type="checkbox" checked="checked" name="rememberMe" />
 					<span class="checkbox__check-inner"></span>
 					<span class="checkbox__check-inner-label">Запомнить меня</span>
 				</label>
