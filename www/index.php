@@ -91,6 +91,17 @@ switch ( $uri[0] ) {
 	case 'messages':
 		include ROOT . "modules/contacts/messages.php";
 		break;
+// :::::::::: ABOUT ::::::::::
+	case 'about':
+		include ROOT . "modules/about/index.php";
+		break;
+	case 'about-edit':
+		include ROOT . "modules/about/edit.php";
+		break;
+// :::::::::: WORKS ::::::::::
+	case 'works':
+		include ROOT . "modules/works/index.php";
+		break;
 // :::::::::: OTHER ::::::::::	
 	default:
 		echo "Main page / 404";

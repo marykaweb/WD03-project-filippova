@@ -1,7 +1,7 @@
 <?php
 	foreach ($success as $item) {
 		if ( count($item) == 1 ){ ?>
-	<div class="error error--success">
+	<div class="error error--success mb-15">
 		<?=$item['title']?>
 	</div>
 	<?php } else if ( count($item) == 2 ) { ?>

@@ -20,11 +20,11 @@ if ( $_GET['result'] == 'catUpdated' ) { ?>
 
 if ( $_GET['result'] == 'catDeleted' ) { ?>
 
-		<div class="error" data-notify-hide>
-			Категория удалена!
-		</div>
+			<div class="error" data-notify-hide>
+				Категория удалена!
+			</div>
 
-		<?php	
+			<?php	
 }
 
 ?>

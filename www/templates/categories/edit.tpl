@@ -9,7 +9,7 @@
 				<div class="fieldset">
 					<label>
 						<div class="fieldset__title">Название категории</div>
-						<input class="input" name="catTitle" placeholder="Введите название" value="<?=$cat['cat_title']?>"/>
+						<input class="input" name="catTitle" placeholder="Введите название" value="<?=$cat['cat_title']?>" />
 					</label>
 				</div>
 				<div class="row">
