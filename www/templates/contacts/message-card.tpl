@@ -4,7 +4,7 @@
 			<?=$message['date_time']?>
 		</div>
 		<div class="user-message__button">
-			<a class="button button--del" href="<?=HOST?>messages?id=<?=$message['id']?>"> Удалить</a>
+			<a class="button button--del button--small" href="<?=HOST?>messages?id=<?=$message['id']?>"> Удалить</a>
 		</div>
 	</div>
 

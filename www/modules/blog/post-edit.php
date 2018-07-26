@@ -10,17 +10,17 @@ $cats = R::find('categories', 'ORDER BY cat_title ASC');
 
 if ( isset($_POST['postUpdate'])) {
 	
-	if ( trim($_POST['postTitle']) == '') {
-		$errors[] = ['title' => 'Введите Название поста' ];
+	if ( trim($_POST['title']) == '') {
+		$errors[] = ['title' => 'Введите название поста' ];
 	}
 
-	if ( trim($_POST['postText']) == '') {
-		$errors[] = ['text' => 'Введите Текст поста' ];
+	if ( trim($_POST['text']) == '') {
+		$errors[] = ['title' => 'Введите текст поста' ];
 	}
 
 	if ( empty($errors)) {
-		$post->title = htmlentities($_POST['postTitle']); 
-		$post->text = $_POST['postText'];
+		$post->title = htmlentities($_POST['title']); 
+		$post->text = $_POST['text'];
 		$post->cat = htmlentities($_POST['postCat']);		
 		$post->authorId = $_SESSION['logged_user']['id'];
 		$post->updateTime = R::isoDateTime();
@@ -88,15 +88,28 @@ if ( isset($_POST['postUpdate'])) {
 			$img = createThumbnailCrop($target_file, $wmax, $hmax);
 			$img->writeImage($resized_file);
 			$post->postImgSmall = "320-" . $db_file_name;
-
 		}
 
-
 		R::store($post);
-		header('Location: ' . HOST . "blog?result=postUpdated");
+		header('Location: ' . HOST . "blog-post?id=" . $_GET['id']);
 		exit();
 	}
+}
 
+if ( isset($_POST['postDeleteImage'])) {
+	
+	$postImgFolderLocation = ROOT . 'usercontent/blog/';
+	$postImg = $post->post_img;
+	$postImgl320 = $post->post_img_small;
+
+	$picurl = $postImgFolderLocation . $postImg;
+	if ( file_exists($picurl) ) { unlink($picurl); }
+
+	$picurl320 = $postImgFolderLocation . '320-' . $postImg;			
+	if ( file_exists($picurl320) ) { unlink($picurl320); }
+
+	R::exec( "UPDATE posts SET posts.post_img = '', post_img_small = '' WHERE posts.id =" . $_GET['id'] . " LIMIT 1" );
+	header('Location: ' . HOST . "blog/post-edit?id=" . $_GET['id']);
 }
 
 ob_start();

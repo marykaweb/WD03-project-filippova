@@ -13,7 +13,7 @@
 
 				<form class="mb-100 pb-20 pt-35" action="edit-text" method="post" enctype="multipart/form-data">
 					<div class="fieldset__title">Имя, Фамилия</div>
-					<input name="name" class="input" placeholder="Имя и Фамилия" value="<?php dataFormPost('name')?>" />
+					<input name="name" class="input" placeholder="Имя и Фамилия" value="<?php dataFormPost('name'); ?>" />
 					<div class="fieldset__title pt-30">Фотография</div>
 					<div class="comment-row">Изображение jpg или png, размером больше чем 100х100 пикселей, и весом до 2Мб.</div>
 					<div class="control-row">

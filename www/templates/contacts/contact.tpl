@@ -37,9 +37,7 @@
 									<?=$contacts[$name]?>
 								</a>
 								<?php } else if ( $name == 'github' ) { ?>
-								<a class="contacts-block-info__item-link" target="_blank" href="<?=$contacts[$name]?>">
-									<?=$contacts[$name]?>
-								</a>
+								<a class="contacts-block-info__item-link" target="_blank" href="<?=$contacts[$name]?>">Профиль GitHub</a>
 								<?php } else { ?>
 								<?=$contacts[$name]?>
 									<?php } ?>
@@ -64,15 +62,15 @@
 							<div class="col">
 
 								<?php if ( @$contacts['vk'] != "") {  ?>
-								<a class="contact-social-link" href="<?=$contacts['vk']?>">Профиль Вконтакте</a>
+								<a class="contact-social-link" href="<?=$contacts['vk']?>" target="_blank">Профиль Вконтакте</a>
 								<?php } ?>
 
 								<?php if ( @$contacts['fb'] != "") {  ?>
-								<a class="contact-social-link" href="<?=$contacts['fb']?>">Профиль Facebook</a>
+								<a class="contact-social-link" href="<?=$contacts['fb']?>" target="_blank">Профиль Facebook</a>
 								<?php } ?>
 
 								<?php if ( @$contacts['twitter'] != "") {  ?>
-								<a class="contact-social-link" href="<?=$contacts['twitter']?>">Профиль Twitter</a>
+								<a class="contact-social-link" href="<?=$contacts['twitter']?>" target="_blank">Профиль Twitter</a>
 								<?php } ?>
 
 							</div>
@@ -112,4 +110,4 @@
 			</div>
 		</div>
 </div>
-<!-- <div class="map" id="map"></div> -->
+<div class="map" id="map"></div>

@@ -19,6 +19,9 @@ if ( isset($_POST['profile-update']) ) {
 	if ( !preg_match("/[0-9a-z]+@[a-z]/", $_POST['email']) ) {
 		 $errors[] = ['title' => 'Неверный формат email'];
 	}
+	if ( R::count('users', 'email = ?', array($_POST['email']) ) == 1 ) {
+			$errors[] = ['title' => 'Пользователь с таким email уже существует'];
+		}
 
 	if( empty($errors) ) {
 		$user->name = htmlentities($_POST['name']);
@@ -98,6 +101,7 @@ if ( isset($_POST['profile-update']) ) {
 			$user->avatarSmall = '48-' . $db_file_name;
 
 		}
+
 
 		R::store($user);
 		$_SESSION['logged_user'] = $user;

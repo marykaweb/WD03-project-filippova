@@ -1,6 +1,6 @@
 <body class="Home-page sticky-footer">
 	<div class="pageContent">
-	<?php 
+		<?php 
 		echo $content; 
 	?>
-</div>
+	</div>

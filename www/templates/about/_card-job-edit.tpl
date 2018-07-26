@@ -4,7 +4,7 @@
 			<?=$job['period']?>
 		</div>
 		<div class="user-message__button">
-			<a class="button button--del" href="#"> Удалить</a>
+			<a class="button button--del button--small" href="<?=HOST?>delete-job?id=<?=$job['id']?>">Удалить</a>
 		</div>
 	</div>
 	<div class="title-4">

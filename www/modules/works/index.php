@@ -1,6 +1,8 @@
 <?php
 $title = "Работы";
 
+$works = R::find('works', 'ORDER BY id DESC');
+
 ob_start();
 include ROOT . "templates/_parts/_header.tpl";
 include ROOT . "templates/works/works.tpl";

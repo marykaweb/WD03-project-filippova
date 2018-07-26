@@ -11,7 +11,6 @@
 	<div class="error-with-desc-bottom">
 		<?=$error['desc']?>
 	</div>
-
 	<?php }
 	}
 ?>

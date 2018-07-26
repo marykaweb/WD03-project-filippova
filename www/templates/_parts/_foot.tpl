@@ -4,6 +4,10 @@
 <!-- build:jsMain js/main.js -->
 <script src="<?=HOST?>templates/assets/js/main.js"></script>
 <!-- endbuild -->
+<!-- google maps-->
+<script async="async" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAm799yaN1ZBAnyf6PT3Y_iXSZLkG5w1oE&amp;callback=initMap"></script>
+<script src="<?=HOST?>templates/assets/js/map.js"></script>
+<!-- //google maps-->
 <script defer="defer" src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 </body>
 

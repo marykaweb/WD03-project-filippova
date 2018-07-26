@@ -7,17 +7,16 @@
 			?>
 			<div class="row justify-content-between align-items-center pl-15 pr-15">
 				<div class="title-1">Блог веб-разработчика</div>
-				<!-- <div class="section-ui"> -->
-			<?php if (isAdmin()) { ?>
+
+				<?php if (isAdmin()) { ?>
 				<a class="button button--edit" href="<?=HOST?>blog/post-new"> Добавить пост</a>
-			<?php } ?>
-				
-				<!-- </div> -->
+				<?php } ?>
+
 			</div>
 			<div class="row pb-100">
-
 				<?php foreach ($posts as $post) {
 				include ROOT . "templates/_parts/_blog-card.tpl";
 			} ?>
 			</div>
 	</div>
+</div>

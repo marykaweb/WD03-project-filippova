@@ -13,7 +13,7 @@
 		<div class="col-xl-9 offset-3">
 
 			<?php foreach($jobs as $job) { ?>
-				<?php include ROOT . "templates/about/_card-job.tpl" ?>
+			<?php include ROOT . "templates/about/_card-job.tpl" ?>
 			<?php } ?>
 
 		</div>

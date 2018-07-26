@@ -15,7 +15,7 @@
 						<a href="<?=HOST?>about">Обо мне</a>
 					</li>
 					<li class="footer__nav-item">
-						<a href="<?=HOST?>portfolio">Работы</a>
+						<a href="<?=HOST?>works">Работы</a>
 					</li>
 					<li class="footer__nav-item">
 						<a href="<?=HOST?>blog">Блог</a>
@@ -26,11 +26,12 @@
 				</ul>
 			</div>
 			<div class="footer__icons">
-				<a href="#"><i class="fab fa-vk"></i></a>
-				<a href="#"><i class="fab fa-twitter"></i></a>
+				<a href="http://vk.com/fmpantera" target="_blank"><i class="fab fa-vk"></i></a>
+<!-- 				<a href="#"><i class="fab fa-twitter"></i></a>
 				<a href="#"><i class="fab fa-youtube"></i></a>
 				<a href="#"><i class="fab fa-instagram"></i></a>
-				<a href="#"><i class="fab fa-facebook"></i></a>
+				<a href="#"><i class="fab fa-facebook"></i></a> -->
+				<a href="https://github.com/marykaweb" target="_blank"><i class="fab fa-github"></i></a>
 			</div>
 		</div>
 	</div>
