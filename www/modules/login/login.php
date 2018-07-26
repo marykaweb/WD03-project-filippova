@@ -25,36 +25,20 @@ if (isset($_POST['login'])) {
 		if ( $user ) {
 			if ( password_verify($_POST['password'], $user->password ) ) {
 				$_SESSION['logged_user'] = $user;
-				$_SESSION['login'] = 1;
+				$_SESSION['login'] = "1";
 				$_SESSION['role'] = $user->role;
-				header('Location: ' . HOST);
-
-				if( isset($_POST('rememberMe')) ) {
-					ini_set('session.gc_maxlifetime', 31104000);
+				
+				if( isset($_POST['rememberMe'] ) ) {
+					ini_set('session.c_maxlifetime', 31104000);
 					ini_set('session.cookie_mlifetime', 31104000);
 				}
 
+				header('Location: ' . HOST);
 				exit();
 			} else {
 				$errors[] = ['title' => 'Пароль неверный!'];
 			}
 		}
-	}
-
-	if( empty($errors) ) {
-		$user = R::dispense('users');
-		$user->email = htmlentities($_POST['email']);
-		$user->role = 'user';
-		$user->password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-		R::store($user);
-
-		$_SESSION['logged_user'] = $user;
-		$_SESSION['login'] = 1;
-		$_SESSION['role'] = $user->role;
-
-		// header('Location' . HOST . "profile-edit");
-		header('Location: ' . HOST);
-		exit();
 	}
 }
 
