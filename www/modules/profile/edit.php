@@ -19,7 +19,7 @@ if ( isset($_POST['profile-update']) ) {
 	if ( !preg_match("/[0-9a-z]+@[a-z]/", $_POST['email']) ) {
 		 $errors[] = ['title' => 'Неверный формат email'];
 	}
-	if ( R::count('users', 'email = ?', array($_POST['email']) ) == 1 ) {
+	if ( $_POST['email'] != $_SESSION['logged_user']['email'] && R::count('users', 'email = ?', array($_POST['email']) ) == 1 ) {
 			$errors[] = ['title' => 'Пользователь с таким email уже существует'];
 		}
 
