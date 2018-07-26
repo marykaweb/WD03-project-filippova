@@ -95,8 +95,14 @@ switch ( $uri[0] ) {
 	case 'about':
 		include ROOT . "modules/about/index.php";
 		break;
-	case 'about-edit':
-		include ROOT . "modules/about/edit.php";
+	case 'edit-text':
+		include ROOT . "modules/about/edit-text.php";
+		break;
+	case 'edit-skills':
+		include ROOT . "modules/about/edit-skills.php";
+		break;
+	case 'edit-jobs':
+		include ROOT . "modules/about/edit-jobs.php";
 		break;
 // :::::::::: WORKS ::::::::::
 	case 'works':

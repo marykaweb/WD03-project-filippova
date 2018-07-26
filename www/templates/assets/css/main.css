@@ -33,6 +33,9 @@ body::before {
 
 
 
+
+
+
 /* fix for top margin collapsing and vertical scroll prevent for body tag, when body height = 100% */
 
 body::before {
@@ -174,6 +177,9 @@ blockquote p {
 
 
 
+
+
+
 /* Remove mobile support */
 
 body {
@@ -188,6 +194,9 @@ body {
 .header__nav-link--active {
 	border: none;
 }
+
+
+
 
 
 
@@ -750,6 +759,9 @@ a.badge-link {
 
 
 
+
+
+
 /* CHECKBOX */
 
 .checkbox {
@@ -795,6 +807,9 @@ a.badge-link {
 	-webkit-box-shadow: 0px 0px 1px 2px #e2e9f0;
 	box-shadow: 0px 0px 1px 2px #e2e9f0;
 }
+
+
+
 
 
 
@@ -853,6 +868,9 @@ a.badge-link {
 	-webkit-box-shadow: 0 0 0 3px #cae2f8, 0 0 0 5px #e2e9f0;
 	box-shadow: 0 0 0 3px #cae2f8, 0 0 0 5px #e2e9f0;
 }
+
+
+
 
 
 
@@ -929,6 +947,9 @@ a.badge-link {
 
 
 
+
+
+
 /* INPUT and TEXTAREA */
 
 .input {
@@ -966,6 +987,9 @@ a.badge-link {
 	-webkit-box-shadow: 0px 0px 1px 2px #e2e9f0;
 	box-shadow: 0px 0px 1px 2px #e2e9f0;
 }
+
+
+
 
 
 
@@ -3227,6 +3251,9 @@ hr {
 
 
 
+
+
+
 /* Floats */
 
 .float-right {
@@ -3236,6 +3263,9 @@ hr {
 .float-left {
 	float: left;
 }
+
+
+
 
 
 
@@ -3265,6 +3295,9 @@ hr {
 
 
 
+
+
+
 /* Font weight */
 
 .light {
@@ -3278,6 +3311,9 @@ hr {
 .strong {
 	font-weight: 700;
 }
+
+
+
 
 
 
@@ -3313,7 +3349,7 @@ hr {
 }
 
 .section-technologi {
-	padding: 0 0 0 77px;
+	padding: 0;
 	background: #222222;
 	color: #fff;
 }
@@ -3459,14 +3495,24 @@ hr {
 .about-work {
 	line-height: 32px;
 }
+
 .contact-item {
 	margin-bottom: 15px;
 }
+
 .contact-social-link {
 	font-weight: 700;
 	margin-bottom: 15px;
 	display: block;
 }
+
+.about-text h2 {
+	font-weight: 800;
+	margin-bottom: 10px;
+}
+
+
+
 
 
 

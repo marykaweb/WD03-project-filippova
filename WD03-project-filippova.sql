@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Июл 24 2018 г., 11:11
+-- Время создания: Июл 24 2018 г., 21:26
 -- Версия сервера: 5.6.38
 -- Версия PHP: 5.5.38
 
@@ -29,17 +29,18 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `about` (
-  `id` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `description` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `id` int(11) UNSIGNED NOT NULL,
+  `name` varchar(191) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
+  `description` text COLLATE utf8mb4_unicode_520_ci,
+  `photo` varchar(191) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
 -- Дамп данных таблицы `about`
 --
 
-INSERT INTO `about` (`id`, `name`, `description`) VALUES
-(1, 'Егор Казаков', 'Я веб-разработчик.');
+INSERT INTO `about` (`id`, `name`, `description`, `photo`) VALUES
+(1, 'Мария Филиппова', '<p>Занимаюсь разработкой сайтов с нуля, под ключ.&nbsp;Выполняю верстку, программирование и наполнение сайтов, так же могу сделать небольшой дизайн.&nbsp;Мне нравится делать интересные и современные проекты.</p>\r\n\r\n<p>&nbsp;Созданный сайт&nbsp;будет иметь весь необходимый функционал и отлично выглядеть на всех устройствах. Вы можете заказать у меня разработку сайта или связаться со мной для сотрудничества.</p>\r\n\r\n<h2>Что я умею</h2>\r\n\r\n<p>Меня привлекет Frontend и Backend разработка, это не только моя работа, но и хобби.&nbsp;</p>\r\n', '231318080.JPG');
 
 -- --------------------------------------------------------
 
@@ -57,9 +58,9 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`id`, `cat_title`) VALUES
-(1, 'Путешествия'),
 (2, 'PHP'),
-(4, 'JavaScript');
+(4, 'JavaScript'),
+(5, 'HTML');
 
 -- --------------------------------------------------------
 
@@ -113,6 +114,27 @@ CREATE TABLE `contacts` (
 
 INSERT INTO `contacts` (`id`, `email`, `phone`, `address`, `name`, `secondname`, `skype`, `vk`, `fb`, `github`, `twitter`) VALUES
 (1, 'admin@test.ru', '5555555', 'Moscow city', 'Мария', 'Филиппова', '', 'Maria', '', 'gituser', '');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `jobs`
+--
+
+CREATE TABLE `jobs` (
+  `id` int(11) UNSIGNED NOT NULL,
+  `period` varchar(191) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
+  `title` varchar(191) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
+  `description` text COLLATE utf8mb4_unicode_520_ci
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+
+--
+-- Дамп данных таблицы `jobs`
+--
+
+INSERT INTO `jobs` (`id`, `period`, `title`, `description`) VALUES
+(3, 'август 2015 &mdash; по настоящее время', 'Руководитель контент отдела', 'Работа в самописной CMS, в 1С Предприятие;\r\nВ мои обязанности входит отслеживание контента на сайте; добавление, редактирование и удаление товаров; создание новых категорий; наполнение контентом; подбор фотографий и написание статьей;\r\nРабота с ценами и остатками товара;\r\nГенерация новых идей по улучшению работы сайта;\r\nВ подчинении 4 удаленных контент-менеджера;\r\nРабота в тандеме с программистами и SEO-оптимизаторами.						'),
+(5, 'апрель 2018 - по настоящее время', 'Веб разработчик', 'Верстка сайтов под ключ. Кроссбраузерная, адаптивная верстка.								');
 
 -- --------------------------------------------------------
 
@@ -171,6 +193,33 @@ INSERT INTO `posts` (`id`, `title`, `text`, `author_id`, `date_time`, `cat`, `po
 -- --------------------------------------------------------
 
 --
+-- Структура таблицы `skills`
+--
+
+CREATE TABLE `skills` (
+  `id` int(11) UNSIGNED NOT NULL,
+  `html` int(11) UNSIGNED DEFAULT NULL,
+  `css` int(11) UNSIGNED DEFAULT NULL,
+  `js` int(11) UNSIGNED DEFAULT NULL,
+  `jquery` int(11) UNSIGNED DEFAULT NULL,
+  `php` int(11) UNSIGNED DEFAULT NULL,
+  `mysql` int(11) UNSIGNED DEFAULT NULL,
+  `git` int(11) UNSIGNED DEFAULT NULL,
+  `gulp` int(11) UNSIGNED DEFAULT NULL,
+  `yarn` int(11) UNSIGNED DEFAULT NULL,
+  `npm` int(11) UNSIGNED DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+
+--
+-- Дамп данных таблицы `skills`
+--
+
+INSERT INTO `skills` (`id`, `html`, `css`, `js`, `jquery`, `php`, `mysql`, `git`, `gulp`, `yarn`, `npm`) VALUES
+(1, 100, 100, 85, 95, 50, 50, 70, 90, 95, 90);
+
+-- --------------------------------------------------------
+
+--
 -- Структура таблицы `users`
 --
 
@@ -198,7 +247,7 @@ INSERT INTO `users` (`id`, `email`, `password`, `role`, `name`, `secondname`, `c
 (32, 'user@test.ru', '$2y$10$b6rrM5IYuNgc4ZxVbPikgewiO19u8Yl/8Xo9fDcUfPY39QQYes59a', 'user', 'Емельян', 'Казаков', 'Рязань', 'Россия', '-95482498.jpg', '48--95482498.jpg', NULL, NULL),
 (33, 'info2@test.ru', '$2y$10$jExYeYIzlqGoP29DxyWDj.ebWp2IfWv4PHGM9HClVziyTwgSa1HHO', 'user', 'Василий', 'Петров', 'Москва', 'Россия', '379330100.jpg', '48-379330100.jpg', NULL, NULL),
 (50, 'info5@test.ru', '$2y$10$B7oBMY1SMil//cVR0MB5P.iHkuQzKrkeglh./YXL6KaD4BH6ZAJ.e', 'user', 'Профиль', 'Тестовый', '222', '111', '607811796.jpg', '48-607811796.jpg', NULL, NULL),
-(51, 'admin@test.ru', '$2y$10$D5T288L5IP0p6rUhnMNeAeAeJr9G.ZybIOT.9BtFNjbQSLjkMYOoe', 'admin', 'Мария', 'Филиппова', 'Москва', 'Россия', '925065124.jpg', '48-925065124.jpg', NULL, NULL),
+(51, 'marykaweb@yandex.ru', '$2y$10$D5T288L5IP0p6rUhnMNeAeAeJr9G.ZybIOT.9BtFNjbQSLjkMYOoe', 'admin', 'Мария', 'Филиппова', 'Москва', 'Россия', '-147903421.JPG', '48--147903421.JPG', NULL, NULL),
 (52, 'info@test.test', '$2y$10$gVIovMTAgTnhNLB50NwjAeAdwbfVLO46mp4vzZvmAN73esIyvM9U2', 'user', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 --
@@ -232,6 +281,12 @@ ALTER TABLE `contacts`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Индексы таблицы `jobs`
+--
+ALTER TABLE `jobs`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Индексы таблицы `messages`
 --
 ALTER TABLE `messages`
@@ -243,6 +298,12 @@ ALTER TABLE `messages`
 ALTER TABLE `posts`
   ADD PRIMARY KEY (`id`),
   ADD KEY `index_foreignkey_posts_author` (`author_id`);
+
+--
+-- Индексы таблицы `skills`
+--
+ALTER TABLE `skills`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Индексы таблицы `users`
@@ -258,13 +319,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `about`
 --
 ALTER TABLE `about`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT для таблицы `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT для таблицы `comments`
@@ -279,6 +340,12 @@ ALTER TABLE `contacts`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT для таблицы `jobs`
+--
+ALTER TABLE `jobs`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT для таблицы `messages`
 --
 ALTER TABLE `messages`
@@ -289,6 +356,12 @@ ALTER TABLE `messages`
 --
 ALTER TABLE `posts`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT для таблицы `skills`
+--
+ALTER TABLE `skills`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT для таблицы `users`
