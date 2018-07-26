@@ -4,10 +4,10 @@
 	<?php require ROOT . "templates/_parts/errors.tpl"; ?>
 
 	<div class="login-page-form__row page-form__row">
-		<input class="input" type="email" placeholder="E-mail" name="email" />
+		<input class="input" type="email" placeholder="E-mail" name="email" value="admin@test.ru" />
 	</div>
 	<div class="login-page-form__row page-form__row">
-		<input class="input" type="password" placeholder="Пароль" name="password" />
+		<input class="input" type="password" placeholder="Пароль" name="password" value="123" />
 	</div>
 	<div class="login-page-form__row">
 		<div class="login-page-form__col">
