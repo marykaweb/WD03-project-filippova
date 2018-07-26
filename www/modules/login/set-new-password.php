@@ -54,7 +54,7 @@ if ( !empty($_GET['email']) ) {
 
 } else {
 	header("Location: " . HOST ."lost-password");
-	die;
+	die();
 }
 // центральная часть
 ob_start();

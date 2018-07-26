@@ -1,7 +1,7 @@
 <?php
 	foreach ($errors as $error) {
 		if ( count($error) == 1 ){ ?>
-	<div class="error">
+	<div class="error mb-15">
 		<?=$error['title']?>
 	</div>
 	<?php } else if ( count($error) == 2 ) { ?>
