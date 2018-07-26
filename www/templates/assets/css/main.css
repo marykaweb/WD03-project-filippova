@@ -16,14 +16,19 @@ body::before {
 	content: ;
 	display: none;
 }
+
 .clearfix::before {
 	content: '';
 	display: table;
-}.clearfix::after {
+}
+
+.clearfix::after {
 	content: '';
 	display: table;
 	clear: both;
 }
+
+
 
 
 
@@ -167,6 +172,8 @@ blockquote p {
 
 
 
+
+
 /* Remove mobile support */
 
 body {
@@ -181,6 +188,8 @@ body {
 .header__nav-link--active {
 	border: none;
 }
+
+
 
 
 
@@ -369,7 +378,7 @@ a.badge-link {
 	color: #ffffff;
 	font-size: 16px;
 	font-weight: 700;
-	line-height: 1.2;
+	line-height: 2.5;
 	text-align: center;
 	-webkit-transform: scaleX(1.0034);
 	-ms-transform: scaleX(1.0034);
@@ -430,7 +439,7 @@ a.badge-link {
 	color: #ffffff;
 	font-size: 13px;
 	font-weight: 400;
-	line-height: 0.7;
+	line-height: 1.9;
 	border: none;
 	text-align: center;
 	background-color: rgba(0, 0, 0, 0.25);
@@ -739,6 +748,8 @@ a.badge-link {
 
 
 
+
+
 /* CHECKBOX */
 
 .checkbox {
@@ -784,6 +795,8 @@ a.badge-link {
 	-webkit-box-shadow: 0px 0px 1px 2px #e2e9f0;
 	box-shadow: 0px 0px 1px 2px #e2e9f0;
 }
+
+
 
 
 
@@ -840,6 +853,8 @@ a.badge-link {
 	-webkit-box-shadow: 0 0 0 3px #cae2f8, 0 0 0 5px #e2e9f0;
 	box-shadow: 0 0 0 3px #cae2f8, 0 0 0 5px #e2e9f0;
 }
+
+
 
 
 
@@ -912,6 +927,8 @@ a.badge-link {
 
 
 
+
+
 /* INPUT and TEXTAREA */
 
 .input {
@@ -949,6 +966,8 @@ a.badge-link {
 	-webkit-box-shadow: 0px 0px 1px 2px #e2e9f0;
 	box-shadow: 0px 0px 1px 2px #e2e9f0;
 }
+
+
 
 
 
@@ -3206,6 +3225,8 @@ hr {
 
 
 
+
+
 /* Floats */
 
 .float-right {
@@ -3215,6 +3236,8 @@ hr {
 .float-left {
 	float: left;
 }
+
+
 
 
 
@@ -3240,6 +3263,8 @@ hr {
 
 
 
+
+
 /* Font weight */
 
 .light {
@@ -3253,6 +3278,8 @@ hr {
 .strong {
 	font-weight: 700;
 }
+
+
 
 
 
@@ -3432,6 +3459,16 @@ hr {
 .about-work {
 	line-height: 32px;
 }
+.contact-item {
+	margin-bottom: 15px;
+}
+.contact-social-link {
+	font-weight: 700;
+	margin-bottom: 15px;
+	display: block;
+}
+
+
 
 
 

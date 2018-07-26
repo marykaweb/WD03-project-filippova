@@ -81,7 +81,17 @@ switch ( $uri[0] ) {
 	case 'blog/post-delete':
 		include ROOT . "modules/blog/post-delete.php";
 		break;
-// :::::::::: USERS ::::::::::	
+// :::::::::: USERS ::::::::::
+	case 'contacts':
+		include ROOT . "modules/contacts/index.php";
+		break;
+	case 'contacts-edit':
+		include ROOT . "modules/contacts/edit.php";
+		break;
+	case 'messages':
+		include ROOT . "modules/contacts/messages.php";
+		break;
+// :::::::::: OTHER ::::::::::	
 	default:
 		echo "Main page / 404";
 		break;
