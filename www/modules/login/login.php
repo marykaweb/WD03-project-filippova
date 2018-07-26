@@ -28,6 +28,12 @@ if (isset($_POST['login'])) {
 				$_SESSION['login'] = 1;
 				$_SESSION['role'] = $user->role;
 				header('Location: ' . HOST);
+
+				if( isset($_POST('rememberMe')) ) {
+					ini_set('session.gc_maxlifetime', 31104000);
+					ini_set('session.cookie_mlifetime', 31104000);
+				}
+
 				exit();
 			} else {
 				$errors[] = ['title' => 'Пароль неверный!'];
