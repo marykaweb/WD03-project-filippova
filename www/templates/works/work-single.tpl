@@ -51,7 +51,11 @@
 				</div>
 			</div>
 			<div class="button-block offset-sm-1 mt-30">
-				<a class="button " href="<?=HOST?>works"><i class="fas fa-arrow-left icon-style icon-style--back"></i>Все работы</a>
-				<!-- <a class="button" href="#">Следующая работа<i class="fas fa-arrow-right icon-style"></i></a> -->
+				<?php if( $_GET['id'] != $sqlFirstId[0]['MIN(id)'] ) { ?>
+				<a class="button " href="<?=HOST?>work-single?id=<?=$sqlPrevId[0]['id']?>"><i class="fas fa-arrow-left icon-style icon-style--back"></i>Предыдущая работа</a>
+				<?php } ?>
+				<?php if ( $_GET['id'] != $sqlLastId[0]['MAX(id)'] ) { ?>
+				<a class="button" href="<?=HOST?>work-single?id=<?=$sqlNextId[0]['id']?>">Следующая работа<i class="fas fa-arrow-right icon-style"></i></a>
+				<?php } ?>
 			</div>
 		</div>

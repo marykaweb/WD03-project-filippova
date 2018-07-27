@@ -1,4 +1,12 @@
-<?php 
+<?php
+
+if ( isset($_GET['id']) ) {
+$sqlCount = R::exec('SELECT * from posts');
+$sqlLastId = R::getAll('SELECT MAX(id) FROM posts');
+$sqlFirstId = R::getAll('SELECT MIN(id) FROM posts');
+$sqlNextId = R::getAll( 'SELECT id FROM `posts` WHERE `id` > ' . $_GET['id'] . ' ORDER BY `id` LIMIT 1');
+$sqlPrevId = R::getAll( 'SELECT id FROM `posts` WHERE `id` < ' . $_GET['id'] . ' ORDER BY `id` DESC LIMIT 1');
+}
 
 $sqlPost = '
 		SELECT 
