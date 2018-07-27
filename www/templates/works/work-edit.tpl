@@ -63,7 +63,7 @@
 					<div class="fieldset">
 						<label>
 							<div class="fieldset__title">Технологии</div>
-							<textarea id="ckeditor3" name="technology" class="textarea height-200" rows="7" placeholder="Введите описание"></textarea>
+							<textarea id="ckeditor3" name="technology" class="textarea height-200" rows="7" placeholder="Введите описание"><?php dataFormPost('technology'); ?></textarea>
 							<?php include_once ROOT . "templates/_parts/_ckEditorConnect.tpl" ?>
 						</label>
 					</div>
@@ -71,7 +71,7 @@
 						<div class="col-4">
 							<label>
 								<div class="fieldset__title">Ссылка на проект</div>
-								<input name="link_project" class="input" placeholder="Введите ссылку" value="<?php dataFormPost('relink_projectsult'); ?>" />
+								<input name="link_project" class="input" placeholder="Введите ссылку" value="<?php dataFormPost('link_project'); ?>" />
 							</label>
 						</div>
 						<div class="col-4">
