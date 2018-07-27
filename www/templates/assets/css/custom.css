@@ -43,3 +43,17 @@
 .circle-indicator--yellow {
 	stroke: #ffcc00;
 }
+
+.comment-wrapper {
+	display: flex;
+	-webkit-flex-basis: 100%;
+			flex-basis: 100%;
+}
+.comment-add__avatar {
+	margin-right: 15px;
+}
+.comment-add-block {
+	-webkit-flex-basis: 90%;
+	        flex-basis: 90%;
+	padding: 0;
+}

@@ -220,11 +220,11 @@ body {
 }
 
 .avatar--small {
-	height: 47px;
+	height: 48px;
 	width: 48px;
 	background-image: url('../img/avatars/noavatar.png');
 	background-repeat: no-repeat;
-	background-size: 47px;
+	background-size: 48px;
 	border-radius: 24px;
 }
 
