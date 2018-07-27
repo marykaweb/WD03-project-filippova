@@ -35,17 +35,16 @@
 				<div class="col-sm-5">
 					<div class="techs">
 						<?php if ( $work['technology'] != '' ) { ?>
-						<div class="title-3 mt-0">Технологии</div>
+						<div class="title-3 mt-0 mb-20">Технологии</div>
 						<?=$work['technology']?>
 						<?php } ?>
 						<?php if ( $work['link_project'] != '' ) { ?>
-						<div class="title-3 mt-40">Ссылка на проект</div>
-						<a href="<?=$work['link_project']?>"><?=$work['link_project']?></a>
+						<div class="title-3 mt-0 mb-20">Ссылка на проект</div>
+						<p><a href="<?=$work['link_project']?>"><?=$work['link_project']?></a></p>
 						<?php } ?>
-						<?php if ( $work['link_project'] != '' ) { ?>
-						
-						<div class="title-3 mt-45">Код на github</div>
-						<a href="<?=$work['link_project']?>"><?=$work['link_github']?></a>
+						<?php if ( $work['link_github'] != '' ) { ?>
+						<div class="title-3 mt-0">Код на github</div>
+						<p><a href="<?=$work['link_project']?>"><?=$work['link_github']?></a></p>
 						<?php } ?>
 					</div>
 				</div>
