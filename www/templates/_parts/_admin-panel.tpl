@@ -26,13 +26,13 @@
 			<a class="header-admin-nav__link" href="<?=HOST?>work">Работа</a>
 		</div>
 		<div class="header-admin-nav__items"><i class="fa fa-edit header-admin-nav__icons"></i>
-			<a class="header-admin-nav__link" href="<?=HOST?>about-edit">Обо мне</a>
+			<a class="header-admin-nav__link" href="<?=HOST?>edit-text">Обо мне</a>
 		</div>
 		<div class="header-admin-nav__items"><i class="fa fa-edit header-admin-nav__icons"></i>
 			<a class="header-admin-nav__link" href="<?=HOST?>contacts-edit">Контакты</a>
 		</div>
 		<div class="header-admin-nav__items"><i class="fa fa-envelope header-admin-nav__icons"></i>
-			<a class="header-admin-nav__link" href="<?=HOST?>messages">Сообщение</a>
+			<a class="header-admin-nav__link" href="<?=HOST?>messages">Сообщения</a>
 		</div>
 	</div>
 	<div class="header-admin__signout">
