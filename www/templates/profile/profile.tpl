@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container mb-50">
 	<div class="row align-items-center mt-40">
 		<div class="col offset-md-1">
 			<div class="title-1 color">Профиль</div>
@@ -41,7 +41,7 @@
 		</div>
 	</div>
 </div>
-<div class="container">
+<!-- <div class="container">
 	<div class="row justify-content-center">
 		<div class="col-md-10">
 			<div class="title-2 color">Комментарии пользователя</div>
@@ -88,4 +88,4 @@
 			</div>
 		</div>
 	</div>
-</div>
+</div> -->
