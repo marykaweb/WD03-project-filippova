@@ -81,6 +81,9 @@ switch ( $uri[0] ) {
 	case 'blog/post-delete':
 		include ROOT . "modules/blog/post-delete.php";
 		break;
+	case 'blog-post/category':
+		include ROOT . "modules/blog/post-category.php";
+		break;
 // :::::::::: USERS ::::::::::
 	case 'contacts':
 		include ROOT . "modules/contacts/index.php";
@@ -104,9 +107,24 @@ switch ( $uri[0] ) {
 	case 'edit-jobs':
 		include ROOT . "modules/about/edit-jobs.php";
 		break;
+	case 'delete-job':
+		include ROOT . "modules/about/delete-job.php";
+		break;
 // :::::::::: WORKS ::::::::::
 	case 'works':
 		include ROOT . "modules/works/index.php";
+		break;
+	case 'work-add':
+		include ROOT . "modules/works/work-add.php";
+		break;
+	case 'work-single':
+		include ROOT . "modules/works/work-single.php";
+		break;
+	case 'work-edit':
+		include ROOT . "modules/works/work-edit.php";
+		break;
+	case 'work-delete':
+		include ROOT . "modules/works/work-delete.php";
 		break;
 // :::::::::: OTHER ::::::::::	
 	default:

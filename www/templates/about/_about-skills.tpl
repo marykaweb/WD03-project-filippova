@@ -14,11 +14,8 @@
 				<? } else { ?>
 					class="circle-indicator circle-indicator--<?=$color?>"
 						<? } ?>
-							stroke-dasharray="<?=$perimetr?>"
-							stroke-dashoffset="<?=$offset?>" 
-							cx="<?=$indicatorWidth/2?>" 
-							cy="<?=$indicatorWidth/2?>" 
-							r="<?=$radius?>"> >
+							stroke-dasharray="
+							<?=$perimetr?>" stroke-dashoffset="<?=$offset?>" cx="<?=$indicatorWidth/2?>" cy="<?=$indicatorWidth/2?>" r="<?=$radius?>"> >
 			</circle>
 		</svg>
 		<div class="indicator__value">

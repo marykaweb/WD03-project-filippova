@@ -1,3 +1,9 @@
+<?php
+	function dataFormPost($fieldName) {
+		global $post;
+		echo @$_POST[$fieldName] != '' ? $_POST[$fieldName] : $post[$fieldName];
+	}
+?>
 <div class="container">
 	<div class="row">
 		<div class="col-xl-10 offset-1">
@@ -9,7 +15,7 @@
 				<div class="fieldset">
 					<label>
 						<div class="fieldset__title">Название</div>
-						<input class="input" name="postTitle" placeholder="Введите название" value="<?=$post['title']?>" />
+						<input class="input" name="title" placeholder="Введите название" value="<?php dataFormPost('title'); ?>" />
 					</label>
 				</div>
 				<div class="fieldset">
@@ -46,7 +52,7 @@
 						<div class="uploaded-image">
 							<img class="uploaded-image__img" src="<?=HOST?>usercontent/blog/<?=$post['post_img_small']?>" alt="<?=$post['title']?>" />
 							<div class="uploaded-image__button">
-								<a class="button button--del" href="#"> Удалить</a>
+								<input type="submit" name="postDeleteImage" class="button button--del" value="Удалить">
 							</div>
 						</div>
 					</div>
@@ -55,9 +61,7 @@
 				<div class="fieldset">
 					<label>
 						<div class="fieldset__title">Содержание</div>
-						<textarea id="ckeditor" class="textarea height-200" rows="7" placeholder="Введите описание" name="postText">
-							<?=$post['text']?>
-						</textarea>
+						<textarea id="ckeditor" class="textarea height-200" rows="7" placeholder="Введите описание" name="text"><?php dataFormPost('text'); ?></textarea>
 						<?php include_once ROOT . "templates/_parts/_ckEditorConnect.tpl" ?>
 					</label>
 				</div>

@@ -23,6 +23,10 @@
 					<?=$about['description']?>
 				</div>
 			</div>
+			<?php
+				if ($uri[0] != 'about') { ?>	
+				<a class="button" href="<?=HOST?>about">Подробнее</a>
+			<?php } ?>	
 		</div>
 	</div>
 </div>
