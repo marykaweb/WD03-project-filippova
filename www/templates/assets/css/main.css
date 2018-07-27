@@ -187,10 +187,6 @@ body {
 	min-width: 1140px;
 }
 
-.header__nav-link--active {
-	border: none;
-}
-
 /* // Remove mobile support */
 
 .transition {
@@ -1704,13 +1700,6 @@ a.user-message__a:hover {
 	padding-bottom: 55px;
 }
 
-.header__nav-link--active {
-	color: #fff;
-	font-size: 18px;
-	font-weight: 600;
-	text-decoration: none;
-}
-
 .header__title {
 	margin-top: 50px;
 	text-decoration: none;
@@ -1804,13 +1793,6 @@ a.user-message__a:hover {
 
 .header__nav-link:hover {
 	padding-bottom: 55px;
-}
-
-.header__nav-link--active {
-	color: #00588b;
-	font-size: 18px;
-	font-weight: 600;
-	text-decoration: none;
 }
 
 .header-admin__signout {
@@ -1969,6 +1951,7 @@ a.user-message__a:hover {
 	font-size: 18px;
 	font-weight: 600;
 	text-decoration: none;
+	border: none;
 }
 
 .header-user__block {

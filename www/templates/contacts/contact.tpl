@@ -110,4 +110,8 @@
 			</div>
 		</div>
 </div>
+<!-- google maps-->
+<script async="async" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAm799yaN1ZBAnyf6PT3Y_iXSZLkG5w1oE&amp;callback=initMap"></script>
+<script src="<?=HOST?>templates/assets/js/map.js"></script>
+<!-- //google maps-->
 <div class="map" id="map"></div>
