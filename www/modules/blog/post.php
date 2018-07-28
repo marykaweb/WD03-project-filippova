@@ -1,13 +1,5 @@
 <?php
 
-if ( isset($_GET['id']) ) {
-$sqlCount = R::exec('SELECT * from posts');
-$sqlLastId = R::getAll('SELECT MAX(id) FROM posts');
-$sqlFirstId = R::getAll('SELECT MIN(id) FROM posts');
-$sqlNextId = R::getAll( 'SELECT id FROM `posts` WHERE `id` > ' . $_GET['id'] . ' ORDER BY `id` LIMIT 1');
-$sqlPrevId = R::getAll( 'SELECT id FROM `posts` WHERE `id` < ' . $_GET['id'] . ' ORDER BY `id` DESC LIMIT 1');
-}
-
 $sqlPost = '
 		SELECT 
 			posts.id, posts.title, posts.text, posts.post_img, posts.date_time, posts.author_id, posts.cat,
@@ -48,6 +40,15 @@ if ( isset($_POST['addComment']) ) {
 		$comment->dateTime = R::isoDateTime();
 		R::store($comment);
 		$comments = R::getAll( $sqlComments );
+	}
+}
+// pagination
+$postPrevNext = R::getCol('SELECT id from posts');
+foreach ($postPrevNext as $index => $id) {
+	if( $id == $post['id']) {
+		@$linkNext = $postPrevNext[$index+1];
+		@$linkPrev = $postPrevNext[$index-1];
+		break;
 	}
 }
 

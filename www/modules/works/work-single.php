@@ -1,14 +1,6 @@
 <?php
 $title = "Название работы";
 
-if ( isset($_GET['id']) ) {
-$sqlCount = R::exec('SELECT * from works');
-$sqlLastId = R::getAll('SELECT MAX(id) FROM works');
-$sqlFirstId = R::getAll('SELECT MIN(id) FROM works');
-$sqlNextId = R::getAll( 'SELECT id FROM `works` WHERE `id` > ' . $_GET['id'] . ' ORDER BY `id` LIMIT 1');
-$sqlPrevId = R::getAll( 'SELECT id FROM `works` WHERE `id` < ' . $_GET['id'] . ' ORDER BY `id` DESC LIMIT 1');
-}
-
 $sql = 'SELECT works.id, works.date_time, works.work_name, works.description, works.result, works.technology, works.link_project, works.link_github, works.maket, works.maket_small, works.author_id, users.name, users.secondname
 	FROM works
 	LEFT JOIN users
@@ -17,6 +9,16 @@ $sql = 'SELECT works.id, works.date_time, works.work_name, works.description, wo
 
 $work = R::getAll($sql);
 $work = $work[0];
+
+// pagination
+$postPrevNext = R::getCol('SELECT id from works');
+foreach ($postPrevNext as $index => $id) {
+	if( $id == $work['id']) {
+		@$linkNext = $postPrevNext[$index+1];
+		@$linkPrev = $postPrevNext[$index-1];
+		break;
+	}
+}
 
 ob_start();
 include ROOT . "templates/_parts/_header.tpl";
