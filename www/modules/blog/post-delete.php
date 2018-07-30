@@ -6,6 +6,7 @@ if ( !isAdmin() ) {
 $title = "Удалить пост";
 
 $post = R::load('posts', $_GET['id']);
+
 if(isset($_POST['postDelete'])) {
 	
 	$postImgFolderLocation = ROOT . 'usercontent/blog/';
@@ -21,6 +22,7 @@ if(isset($_POST['postDelete'])) {
 	}
 
 	R::trash($post);
+	R::exec('DELETE from comments where post_id = ' . $_GET['id'] . '');
 	header('Location: ' . HOST . 'blog?result=postDeleted');
 	exit();
 }
