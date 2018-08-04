@@ -3547,7 +3547,10 @@ hr {
 .blog__category--unlink {
 	font-weight: 900;
 }
-
+.opacity-0 {
+	opacity: 0;
+	cursor: default;
+}
 
 
 

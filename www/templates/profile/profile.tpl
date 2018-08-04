@@ -41,51 +41,53 @@
 		</div>
 	</div>
 </div>
-<!-- <div class="container">
+<div class="container">
 	<div class="row justify-content-center">
 		<div class="col-md-10">
 			<div class="title-2 color">Комментарии пользователя</div>
 			<div class="profile-comments mb-100">
-				<div class="user-comment">
+			<?php 
+			
+			foreach ($comments as $comment) { ?>
+			<div class="user-comment">
 					<div class="user-comment-wrap">
 						<div class="comment-wrap">
 							<div class="user-name">
-								<a href="#">Поездка в LA</a>
+								<a href="#"><?=$comment['title']?></a>
 							</div>
 							<div class="user-date"><i class="far fa-clock"></i>
-								<span class="user-date--dat">05 Мая 2017 года в 15:45</span>
+								<span class="user-date--dat"><?=$comment['date_time']?></span>
 							</div>
 						</div>
-						<p class="user-text">Замечательный парк, обязательно отправлюсь туда этим летом.</p>
+						<p class="user-text"><?=$comment['text']?></p>
 					</div>
 				</div>
-				<div class="user-comment">
-					<div class="user-comment-wrap">
-						<div class="comment-wrap">
-							<div class="user-name">
-								<a href="#">Ноутбук для веб-разработчика</a>
-							</div>
-							<div class="user-date"><i class="far fa-clock"></i>
-								<span class="user-date--dat">15 Мая 2017 года в 10:02</span>
-							</div>
-						</div>
-						<p class="user-text">Замечательный парк, обязательно отправлюсь туда этим летом.</p>
-					</div>
-				</div>
-				<div class="user-comment">
-					<div class="user-comment-wrap">
-						<div class="comment-wrap">
-							<div class="user-name">
-								<a href="#">Настройка Sublime</a>
-							</div>
-							<div class="user-date"><i class="far fa-clock"></i>
-								<span class="user-date--dat">12 Мая 2017 года в 20:39</span>
-							</div>
-						</div>
-						<p class="user-text">Замечательный парк, обязательно отправлюсь туда этим летом.</p>
-					</div>
-				</div>
+			<?php } ?>
 			</div>
+		
+			<div class="pagination">
+				<?php if (count($row) > 5) { 
+					$nextPage = $_GET['page'] + 1;
+					$lastPage = $_GET['page'] - 1;
+					?>
+					<?php if( $_GET['page'] > 1 ) { ?>
+						<a class="pagination__item pagination__item--prev " href="<?=HOST?>profile?page=<?=$lastPage?>">Назад</a>
+					<?php } else { ?>
+						<a class="pagination__item pagination__item--prev opacity-0" href="<?=HOST?>profile?page=<?=$lastPage?>">Назад</a>
+					<?php }?>
+					
+					<?php for ($i=1; $i<=ceil(count($row)/5); $i++) { ?>
+						<a class="pagination__item" href="<?=HOST?>profile?page=<?=$i?>"><?=$i?></a>
+					<?php } ?>
+
+					<?php if( $_GET['page'] < ceil(count($row)/5 ) ) { ?>
+						<a class="pagination__item pagination__item--next" href="<?=HOST?>profile?page=<?=$nextPage?>">Вперед</a>
+					<?php } else { ?>
+						<a class="pagination__item pagination__item--next opacity-0" href="<?=HOST?>profile?page=<?=$nextPage?>">Вперед</a>
+					<?php }?>
+			<?php } ?>
+			</div>
+
 		</div>
 	</div>
-</div> -->
+</div>

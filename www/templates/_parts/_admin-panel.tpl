@@ -10,7 +10,7 @@
 				<?=$_SESSION['logged_user']['name']?>
 					<?=$_SESSION['logged_user']['secondname']?>
 			</div>
-			<a class="badge-link" href="<?=HOST?>profile">
+			<a class="badge-link" href="<?=HOST?>profile?page=1">
 				<div class="badge">Администратор</div>
 			</a>
 		</div>
