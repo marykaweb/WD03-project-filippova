@@ -51,12 +51,16 @@ print_r($comments);
 					<?=$post['text']?>
 				</div>
 				<div class="flex-container-button mt-30">
-					<?php if( $_GET['id'] != $sqlFirstId[0]['MIN(id)'] ) { ?>
-					<a class="button " href="<?=HOST?>blog-post?id=<?=$sqlPrevId[0]['id']?>"><i class="fas fa-arrow-left icon-style icon-style--back"></i>Назад</a>
-					<?php } ?>
-					<?php if( $_GET['id'] != $sqlLastId[0]['MAX(id)'] ) { ?>
-					<a class="button" href="<?=HOST?>blog-post?id=<?=$sqlNextId[0]['id']?>">Вперед<i class="fas fa-arrow-right icon-style"></i></a>
-					<?php } ?>
+					<div class="buttonWrap">
+						<?php if( $linkPrev != NULL ) { ?>
+						<a class="button " href="<?=HOST?>blog-post?id=<?=$linkPrev?>"><i class="fas fa-arrow-left icon-style icon-style--back"></i>Назад</a>
+						<?php } ?>
+					</div>
+					<div class="buttonWrap">
+						<?php if( $linkNext != NULL ) { ?>
+						<a class="button" href="<?=HOST?>blog-post?id=<?=$linkNext?>">Вперед<i class="fas fa-arrow-right icon-style"></i></a>
+						<?php } ?>
+					</div>
 				</div>
 
 				<?php
