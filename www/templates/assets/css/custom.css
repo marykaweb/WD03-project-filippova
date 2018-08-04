@@ -1,0 +1,59 @@
+.indicator {
+	position: relative;
+	display: inline-block;
+}
+
+.indicator__value {
+	font-size: 20px;
+	font-weight: 900;
+	letter-spacing: 0.005em;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.circle {
+	width: 112px;
+	height: 112px;
+}
+
+.circle-bg {
+	fill: transparent;
+	stroke-width: 10px;
+	stroke: rgba(226, 226, 226, 0.05);
+}
+
+.circle-indicator {
+	fill: transparent;
+	stroke-width: 10px;
+	stroke: rgba(255, 255, 255, 0.5);
+	transform-origin: center center;
+	transform: rotate(-90deg);
+}
+
+.circle-indicator--green {
+	stroke: #3aaa35;
+}
+
+.circle-indicator--blue {
+	stroke: #009cf5;
+}
+
+.circle-indicator--yellow {
+	stroke: #ffcc00;
+}
+
+.comment-wrapper {
+	display: flex;
+	-webkit-flex-basis: 100%;
+			flex-basis: 100%;
+}
+.comment-add__avatar {
+	margin-right: 15px;
+}
+.comment-add-block {
+	-webkit-flex-basis: 90%;
+	        flex-basis: 90%;
+	padding: 0;
+}
